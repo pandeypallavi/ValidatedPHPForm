@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Registration Form for Curious Baby Toy Land">
+<meta name="keywords" content="resigtration process, register ,Curious Baby Toy Land">
+<link href="contact_form_style.css" type="text/css" rel="stylesheet"/>
+<link href="reset.css" type="text/css" rel="stylesheet"/>
+<title>Registration / CheckOut for Curious Baby Toy Land</title>
+</head>
+<body>
+<section id="container">
+<div id="formcontent">
+<form id="register" role="form">
+<h1>Registration / CheckOut for Curious Baby Toy Land</h1>
+<fieldset> 
+ <legend>Personal details</legend> 
+  <div class="form-group">
+	<label for="name" class="lablestyle"> Full Name</label>
+      <div class="input-group">
+		<input id="name" name="name" type="text" placeholder="Full Name*" required autofocus aria-required="true"> 
+      </div>
+  </div>
+  
+  <div class="form-group"> 
+    <label for="dob" class="lablestyle"> Date of Birth</label>
+      <div class="input-group">
+		<input id="dob" name="dob" type="date" required aria-required="true">
+	  </div>
+    </div> 
+  <div class="form-group"> 
+    <label for="email" class="lablestyle"> Email </label>
+	  <div class="input-group">
+        <input id="email" name="email" type="email" placeholder="example@domain.com*" required aria-required="true">
+	  </div>
+    </div> 
+  <div class="form-group">  
+        <label for="url" class="lablestyle"> URL </label>
+        <div class="input-group">
+		<input id="url" name="url" type="url" placeholder="http://mysite.com">
+		 </div>
+  </div>    
+  <div class="form-group">
+        <label for="phone" class="lablestyle">Telephone </label>
+        <div class="input-group">
+		<input id="phone" name="phone" type="tel" placeholder="Eg. +1 555 5555*" 
+		 title="enter" required autocomplete="off" aria-required="true">
+		</div> 
+  </div> 
+  
+ 	
+	</fieldset>
+	<fieldset>
+	<legend>Billing details</legend> 
+  <div class="form-group">
+	<label for="address"  class="lablestyle"> Address</label>
+        <div class="input-group">
+		<textarea id="address" name="address" rows=5 required aria-required="true"></textarea>
+         </div>
+  </div>
+  <div class="form-group">
+	<label for="postCode" class="lablestyle">Post code</label>
+        <div class="input-group">
+		<input id="postCode" name="postCode" type="text" pattern="(\d{5}([\-]\d{4})?)" required aria-required="true"> 
+		<!-- regex is for American Postal code , as countory across the world dont follow ommon pattern for postal code. I believe this can be done by using Javascript or xml. which needs time so for thi sassignment i am just puting regexfor US-->
+         </div>
+  </div>
+    <label for="country" class="lablestyle">Country </label>
+        <div class="input-group">
+		<input id="country" name="country" list="country-names" type="text" required aria-required="true"> 
+        <datalist id="country-names"> 
+        	<option label="England" value="England"></option> 
+        	<option label="Northern Ireland" value="Northern Ireland"></option> 
+        	<option label="Ireland" value="Ireland"></option> 
+        	<option label="Scotland" value="Scotland"></option> 
+        	<option label="Wales" value="Wales"></option> 
+        </datalist>
+		</div>
+	</fieldset>
+	<fieldset> 
+    <legend>Card details</legend> 
+    <fieldset> 
+      <legend>Card type</legend>	  
+	  <div class="card-type"> 
+          <input id="visa" name="cardtype" type="radio"> 
+          <label for="visa">VISA</label> 
+          <input id="mastercard" name="cardtype" type="radio">
+          <label for="mastercard">Mastercard</label> 
+          <input id="amex" name="cardtype" type="radio"> 
+          <label for="amex">Creditcard</label>
+      </div> 
+	  </fieldset>
+    <div class="form-group"> 
+        <label for="cardName" class="lablestyle">Name</label> 
+		<div class="input-group">
+        <input id="cardName" name="cardName" type="text" placeholder="Name as it appears on your card" required aria-required="true" autocomplete="off">
+		 </div>
+    </div>
+	
+	<div class="form-group"> 
+        <label for="ccnum" class="lablestyle">Card number</label>
+		<div class="input-group">
+            <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444" 
+			pattern="^(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14}|3[47][0-9]{13}|3(?:0[0-5]|[68][0-9])[0-9]{11}|6(?:011|5[0-9]{2})[0-9]{12}|(?:2131|1800|35\d{3})\d{11})$" title="16 Digit Card number" required aria-required="true">
+			<!-- The above card -patetrn is not working properly.I am still playing with the different pattern to get it. For this assignment I am using this pattern just to demonstrate the use of pattern. -->
+			</div>
+			</div>
+	<div class="form-group">		
+            <label for="expiry" class="lablestyle">Exp Month</label>
+			<div class="input-group">
+             <input name="expiry" id="expiry" type="month" required aria-required="true">
+	</div>
+	</div>
+	<div class="form-group">
+	
+	<label for="cvv" class="lablestyle">CVV</label>
+	<div class="input-group">
+                <input type="text" id="cvv" name="cvv" placeholder="352" maxlength="3"  pattern="[0-9]{3}" title="Three number CVV code" required aria-required="true"> 
+	</div>
+ </div>
+ 
+	</fieldset>
+	<fieldset> 
+ <legend>Product details</legend> 
+	<div class="form-group">
+		<label for="pquantity" class="lablestyle">Product quantity</label>
+		<div class="input-group">
+		<input id="pquantity" name="quantity" type="number" min="1" max="12"  value="4" required>
+		</div>
+  </div>
+	<div class="form-group">
+ <label for="promoCode" class="lablestyle">Promotion Code</label>
+ <div class="input-group">
+ <input type="text" id="promoCode" placeholder="QRB-001" required title="Your promotion code is three uppercase letters, a dash, then three numbers" pattern="[A-Z]{3}-[0-9]{3}" > <!-- WOorking and tested pattern -->
+ </div>
+ </div>
+  <div class="slidecontainer">
+  <label for="range" class="lablestyle">What is your budget?</label>
+  <input type="range" min="1" max="1000" value="500" class="slider" id="range">
+  <p>Value: <span id="demo"></span>$</p>
+</div>
+</fieldset>
+	 <div> 
+	    <button class="button" type=submit>Submit</button> 
+    </div> 
+	</form>
+	</div>
+	</section>
+<script>
+var slider = document.getElementById("range");
+var output = document.getElementById("demo");
+output.innerHTML = slider.value;
+
+slider.oninput = function() {
+  output.innerHTML = this.value;
+}
+</script>
+</body>
+</html>
